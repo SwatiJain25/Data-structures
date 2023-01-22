@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n,found=0;;
+cout<<"The number of elements to be entered "<<endl;
+cin>>n;
+int arr[n];
+for(int i=0;i<n;i++){
+cin>>arr[i];
+}
+int element;
+cout<<"The element to be deleted is"<<endl;
+cin>>element;
+for(int i=0; i<n; i++)
+{
+if(arr[i]==element)
+{
+for(int j=i; j<(n-1); j++)
+arr[j] = arr[j+1];
+found++;
+i--;
+n--;
+}
+}
+if(found==0)
+cout<<"\nElement doesn't found in the Array!";
+else
+{
+cout<<"\nElement Deleted Successfully!";
+cout<<"\n\nThe New Array is:\n";
+for(int i=0; i<n; i++)
+cout<<arr[i]<< “ “;
+}
+cout<<endl;
+return 0;
+}
