@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main () {
+int n, found=0;
+cout<<"The number of elements to be entered "<<endl;
+cin>>n;
+int arr[n];
+for (int i=0; i<n; i++) {
+cin>>arr[i];
+}
+int element;
+cout<<"The element to be searched is"<<endl;
+cin>>element;
+cout<<"The searched element is at the index"<<endl;
+for (int i=0; i<n; i++) {
+if(arr[i]==element) {
+cout<<i;
+}
+else cout<<"The element is not found "<<endl;
+}
+return 0;
+}
